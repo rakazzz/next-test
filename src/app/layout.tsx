@@ -1,6 +1,10 @@
+
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import {FaInstagram, FaWhatsapp} from 'react-icons/fa6'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +20,43 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+      </head>
+      <body className={inter.className} >{children} 
+      <footer className='bg-gray-500  bottom-0 static mx-auto w-screen'>
+        <div className='flex flex-col sm:flex-row items-bottom mx-3 sm:mx-auto sm:max-w-6xl mb-4 justify-between  mt-3'>
+          <div className=' text-white mt-3 text-left'>
+            <Image 
+            className=''
+            src="/logo_gowa.png" 
+            width={100}
+            height={100}
+            alt="" />
+            <p  className='font-bold text-lg'>SIPAKAMASETA</p>
+            <p  className='font-medium text-md mt-5'>DESA TAMANNYELENG</p>
+            <p  className='font-medium text-md'>Jl. Placeholder No. 11</p>
+          </div>
+          <div className=''>
+              <ul className='mt-4 text-white'>
+                <li className='text-lg font-bold mb-4'>Navigasi</li>
+                <li className='my-3'><Link href='/'>Home </Link></li>
+                <li className='my-3'><Link href='/'>Home </Link></li>
+                <li className='my-3'><Link href='/administrasi'>Administrasi </Link></li>
+              </ul>              
+            </div>
+            <div className='flex flex-row gap-2 items-center text-white mb-3 mt-3'>
+              <button>
+                <FaInstagram className='h-5 w-5'/>
+              </button>
+              <button>
+                 <FaWhatsapp className='h-5 w-5'/>
+              </button>
+            </div>  
+        </div>
+      </footer>      
+      </body>
+
     </html>
   )
 }
