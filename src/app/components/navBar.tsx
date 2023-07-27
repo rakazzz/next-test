@@ -1,12 +1,19 @@
-// 'use client'
+'use client'
 
 import Link from 'next/link'
 import Image from 'next/image'
 import {HiMenuAlt3} from 'react-icons/hi'
-// import { useState } from 'react'
+import  Paper  from '@mui/material/Paper'
+import  BottomNavigation  from '@mui/material/BottomNavigation'
+import  BottomNavigationAction  from '@mui/material/BottomNavigationAction'
+import { useState } from 'react'
+import RestoreIcon from '@mui/icons-material/Restore';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ArchiveIcon from '@mui/icons-material/Archive';
 
 
 export default function MobileNav() {
+  const [value, setValue] = useState(0);
     // let [view, setView] = useState(false)
 
     // function openView() {
@@ -31,7 +38,11 @@ export default function MobileNav() {
             src='/logo_gowa.png' 
             alt='pic'/>
           </div>
-          <p className='my-auto font-bold'>DESA TAMANNYELENG</p>
+          <div className='flex flex-col my-auto'>
+          <p className='font-bold'>Desa Tamannyeleng</p>
+          <p className='font-bold'>Kabupaten Gowa</p>
+
+          </div>
         </div>
         <div className='flex content-center gap-5'>
           <h2 className='text-black hover:text-red-400 hidden sm:block'>
@@ -55,7 +66,7 @@ export default function MobileNav() {
         </nav>
         <div>
                 
-                <div className='w-full bg-white fixed bottom-0  mb-3 sm:hidden '>
+                {/* <div className='w-full bg-white fixed bottom-0  mb-3 sm:hidden '>
                  <ul className='flex flex-row gap-3 justify-center'>
                     <Link href='/' passHref>
                         <li className='bg-gray-300 p-2 rounded-lg text-sm'>Home</li>
@@ -68,7 +79,21 @@ export default function MobileNav() {
                     </Link>
                  </ul>
             
-                </div>
+                </div> */}
+
+                {/* <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
+        <BottomNavigation
+          showLabels
+          value={value}
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }}
+        >
+          <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+          <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+          <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} />
+        </BottomNavigation>
+      </Paper> */}
 
                  
                 

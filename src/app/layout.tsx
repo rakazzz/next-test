@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import {FaInstagram, FaWhatsapp} from 'react-icons/fa6'
 import Image from 'next/image'
 import Link from 'next/link'
+import BottomNav from './components/bottomNav'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,7 +25,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
       </head>
       <body className={inter.className} >{children} 
-      <footer className='bg-gray-500  bottom-0 static mx-auto w-screen'>
+      <footer className='bg-gray-500 pb-10 static mx-auto w-screen'>
         <div className='flex flex-col sm:flex-row items-bottom mx-3 sm:mx-auto sm:max-w-6xl mb-4 justify-between  mt-3'>
           <div className=' text-white mt-3 text-left'>
             <Image 
@@ -45,16 +46,20 @@ export default function RootLayout({
                 <li className='my-3'><Link href='/administrasi'>Administrasi </Link></li>
               </ul>              
             </div>
-            <div className='flex flex-row gap-2 items-center text-white mb-3 mt-3'>
+            <div className='flex flex-row gap-2 place-items-end text-white mb-3 mt-3'>
               <button>
-                <FaInstagram className='h-5 w-5'/>
+                <a href="https://www.instagram.com/">
+                  <FaInstagram className='h-5 w-5'/>
+                </a>
               </button>
               <button>
                  <FaWhatsapp className='h-5 w-5'/>
               </button>
             </div>  
         </div>
-      </footer>      
+      </footer>
+      <BottomNav></BottomNav>    
+      
       </body>
 
     </html>

@@ -1,5 +1,6 @@
+import BottomNav from './components/bottomNav'
 import MobileNav from './components/navBar'
-// import Image from 'next/image'
+import Image from 'next/image'
 // import Link from 'next/link'
 // import {HiMenuAlt3} from 'react-icons/hi'
 
@@ -12,10 +13,26 @@ export default function Home() {
       
       <MobileNav/>
       <div className='bg-yellow-400 min-h-screen max-w-6xl mx-auto rounded-t-3xl pt-3 pb-3'>
-        <div className=' sm:flex sm:flex-row sm:max-w-lg grid bg-gray-300 justify-between content-center p-4 mt-5 mx-4 rounded-lg drop-shadow-lg'>
-            <img className='rounded-md shadow ' src="https://awsimages.detik.net.id/community/media/visual/2023/06/20/ultah-jokowi-hari-ini-simak-lagi-biografi-joko-widodo-lengkap-1_169.jpeg?w=1200" alt="" />
-            <div className='text-black text-center text-lg'>Kata Pengantar Kades</div>
-        </div> 
+        <div className=' justify-center p-4 mt-5 mx-4 rounded-lg drop-shadow-lg'>
+          <div className='sm:flex sm:flex-row sm:max-w-md'>
+            <img className='rounded-md shadow-xl object-center mx-auto' src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Adnan_Purichta_Ichsan%2C_Bupati_Gowa_%28Periode_II%29.png" alt="" />
+            <p className='pt-4 text-white text-3xl font-extrabold'>Website Desa Tamannyeleng</p>            
+            <p className='pt-4 text-white text-md font-medium'>
+              Desa Tamannyeleng merupakan desa yang terletak di Kecamatan Barombong Kabupaten Gowa dengan jumlah penduduk sekitar 5000 jiwa</p>            
+          </div>
+
+
+
+        </div>           
+        <div className='bg-white p-4 mt-5'>
+          <p className='text-2xl font-extrabold pb-3'>Profil Desa</p>
+          <img
+          className='w-100 h-100'
+          alt='foto kantor'
+          src='https://asset-2.tstatic.net/tangerang/foto/bank/images/Kantor-Lurah-Lengkong-Gudang.jpg'
+          />
+          asa
+        </div>
         <div className='bg-gray-400 mt-3'>
           <p className='mx-5 pt-3 font-bold'>Konten atau produk</p>
           <div className='flex flex-row overflow-x-auto  justify-between mx-5 gap-3 pb-3'>
@@ -41,6 +58,8 @@ export default function Home() {
           </div>          
         </div>
       </div> 
+      {/* <BottomNav></BottomNav>     */}
+
     </main>
   )
 }
