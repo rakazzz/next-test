@@ -11,11 +11,11 @@ model post {
   id        Int      @id @default(autoincrement())
   title     String   @db.VarChar(255)
   createdAt DateTime @default(now()) @db.Timestamp(0)
-  content   String?  @db.Text
+  content   String  @db.Text
   published Boolean  @default(false)
   authorId  Int
+  kontak    String  @default("0") @db.VarChar(16) 
   user      user     @relation(fields: [authorId], references: [id], onUpdate: Restrict, map: "post_ibfk_1")
-
   @@index([authorId], map: "authorId")
 }
 
