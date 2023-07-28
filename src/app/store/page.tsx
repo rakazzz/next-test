@@ -29,10 +29,10 @@ export default async function Page() {
             {/* Item List */}
             <div className='flex flex-row flex-wrap justify-center gap-4 max-w-full '>
             {post.map((item)=>
-                <div className='basis-2/5 sm:basis-1/6 bg-white shadow-lg rounded-xl relative'>
+                <div className='basis-2/5 sm:basis-1/6 bg-white shadow-lg rounded-xl'>
                     <img className='rounded-t-xl object-cover w-full max-h-36' src={item.content} alt="" />
                     <p className='p-2'>{item.title}</p>
-                    <p className='p-2   relative bottom-0 align-text-bottom'>{item.kontak}</p>
+                    <p className='p-2 '>{item.kontak}</p>
                 </div>
                 // {/* <div className='basis-2/5 sm:basis-1/6 bg-white shadow-lg rounded-xl'>
                 //     <img className='rounded-t-xl' src="https://flowbite.com/docs/images/carousel/carousel-1.svg" alt="" />

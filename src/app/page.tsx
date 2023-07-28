@@ -1,11 +1,12 @@
 import BottomNav from './components/bottomNav'
 import MobileNav from './components/navBar'
 import Image from 'next/image'
+import SlideContent from './components/homeContent'
 // import Link from 'next/link'
 // import {HiMenuAlt3} from 'react-icons/hi'
 
 
-export default function Home() {
+export default async function Home() {
   
   return (
     <main className="">
@@ -35,7 +36,8 @@ export default function Home() {
         </div>
         <div className='bg-gray-400 mt-3'>
           <p className='mx-5 pt-3 font-bold'>Konten atau produk</p>
-          <div className='flex flex-row overflow-x-auto  justify-between mx-5 gap-3 pb-3'>
+          <SlideContent />
+          {/* <div className='flex flex-row overflow-x-auto  justify-between mx-5 gap-3 pb-3'>
             <div className='basis-1/4 flex-shrink-0 bg-white max-w-sm mt-5 rounded-md shadow-lg'>
               <img className='rounded-t-md w-full' src="https://flowbite.com/docs/images/carousel/carousel-1.svg" alt=""></img>  
               <div className='text-sm'>
@@ -55,7 +57,7 @@ export default function Home() {
               <img className='rounded-t-md' src="https://flowbite.com/docs/images/carousel/carousel-1.svg" alt="" />
               <p>ini</p>
             </div>     
-          </div>          
+          </div>           */}
         </div>
       </div> 
       {/* <BottomNav></BottomNav>     */}
