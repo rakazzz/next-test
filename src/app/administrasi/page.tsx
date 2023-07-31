@@ -8,20 +8,6 @@ import User from '../components/userDetails';
 import {prisma} from "@/../route"
 import ListSurat from '../components/listSurat';
 
-
-
-
-const surat = [
-    {name: 'Surat Keterangan Jabatan'},
-    {name: 'Surat Keterangan Lokasi Tanah'},
-    {name: 'Surat Keterangan Kehilangan Kartu Keluarga'},
-    {name: 'Surat Keterangan Domisili'},
-    {name: 'Surat Keterangan Belum Terbit E-KTP'},
-    {name: 'Surat Keterangan Ghoib'},
-    {name: 'Surat Keterangan Belum Memiliki Rumah'},
-    {name: 'Surat Perjanjian Utang Piutang'},
-]
-
 export default function Page(){
     return (
         <div className='min-h-screen'>

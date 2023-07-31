@@ -35,14 +35,14 @@ export default function RootLayout({
             height={100}
             alt="" />
             <p  className='font-bold text-lg'>SIPAKAMASETA</p>
-            <p  className='font-medium text-md mt-5'>DESA TAMANNYELENG</p>
-            <p  className='font-medium text-md'>Jl. Placeholder No. 11</p>
+            <p  className='text-md mt-5 font-semibold'>DESA TAMANNYELENG</p>
+            <p  className='font-medium text-md'>Kec. Barombong, Kab. Gowa, Sulawesi Selatan</p>
           </div>
           <div className=''>
               <ul className='mt-4 text-white'>
                 <li className='text-lg font-bold mb-4'>Navigasi</li>
                 <li className='my-3'><Link href='/'>Home </Link></li>
-                <li className='my-3'><Link href='/'>Home </Link></li>
+                <li className='my-3'><Link href='/store'>Ga'de </Link></li>
                 <li className='my-3'><Link href='/administrasi'>Administrasi </Link></li>
               </ul>              
             </div>

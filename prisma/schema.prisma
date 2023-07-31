@@ -11,12 +11,13 @@ model post {
   id        Int      @id @default(autoincrement())
   title     String   @db.VarChar(255)
   createdAt DateTime @default(now()) @db.Timestamp(0)
-  content   String  @db.Text
+  content   String   @db.Text
   published Boolean  @default(false)
-  authorId  Int
-  kontak    String  @default("0") @db.VarChar(16) 
-  user      user     @relation(fields: [authorId], references: [id], onUpdate: Restrict, map: "post_ibfk_1")
-  @@index([authorId], map: "authorId")
+  // authorId  Int
+  kontak    String   @default("0") @db.VarChar(50) 
+  price     String   @default("0")@db.VarChar(9)
+  // user      user     @relation(fields: [authorId], references: [id], onUpdate: Restrict, map: "post_ibfk_1")
+  // @@index([authorId], map: "authorId")
 }
 
 model profile {
@@ -29,9 +30,9 @@ model profile {
 model user {
   id      Int      @id @default(autoincrement())
   name    String?  @db.VarChar(255)
-  email   String   @unique(map: "email") @db.VarChar(255)
+  // email   String   @unique(map: "email") @db.VarChar(255)
   alamat  String   @default("") @db.VarChar(100)
-  post    post[]
+  // post    post[]
   profile profile?
   nowa    String  @db.VarChar(16) 
 }
