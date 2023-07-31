@@ -4,7 +4,7 @@ import { Button, Card, Navbar } from 'flowbite-react';
 import { Sidebar } from 'flowbite-react';
 import { HiArrowSmRight, HiArrowSmLeft } from 'react-icons/hi';
 import Link from 'next/link'
-import User from '../components/userDetails';
+// import User from '../components/userDetails';
 import {prisma} from "@/../route"
 import ListSurat from '../components/listSurat';
 
