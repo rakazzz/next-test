@@ -7,11 +7,19 @@ import  NumberFormat  from 'react-number-format'
 
 
 
-export default async function Page() {
-
+export async function getStaticProps() {
     const post = await prisma.post.findMany({
         where: { published: true, },
     })
+    return {
+        props: {
+            post,
+        }, revalidate:10
+    }
+
+}
+export default async function Page({post}: any) {
+
     return (
         <div className="min-h-screen">
             {/* navbar & search box */}
