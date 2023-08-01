@@ -5,7 +5,7 @@ import Link from 'next/link';
 // import {useState} from 'react'
 import {prisma} from "@/../route"
 import {NumericFormat} from 'react-number-format';
-
+import { revalidatePath } from 'next/cache';
 import Handle from '@/app/components/uploadAction'
 import UploadImage from '../../components/imgUpload'
 export default function Page() {
@@ -33,6 +33,8 @@ export default function Page() {
                 kontak: dataF.get('kontak') as string,
             }
         })
+        revalidatePath('/store')
+
 
     }
     return (
