@@ -3,22 +3,19 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {prisma}  from '../../../route'
 import  NumberFormat  from 'react-number-format'
+import { revalidatePath } from 'next/cache'
   
 
 
 
-export async function getStaticProps() {
-    const post = await prisma.post.findMany({
-        where: { published: true, },
-    })
-    return {
-        props: {
-            post,
-        }, revalidate:10
-    }
+export default async function Page() {
 
-}
-export default async function Page({post}: any) {
+        const post = await prisma.post.findMany({
+            where: { published: true},
+        })
+        revalidatePath('/store')
+
+    
 
     return (
         <div className="min-h-screen">
