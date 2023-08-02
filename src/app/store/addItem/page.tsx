@@ -4,10 +4,10 @@ import Link from 'next/link';
 // import axios from 'axios';
 // import {useState} from 'react'
 import {prisma} from "@/../route"
-import {NumericFormat} from 'react-number-format';
+// import {NumericFormat} from 'react-number-format';
 import { revalidatePath } from 'next/cache';
 import Handle from '@/app/components/uploadAction'
-import UploadImage from '../../components/imgUpload'
+
 export default function Page() {
     // const preset_key = "hyidm3qm"
     // const cloud_name = "dlunh7tzm"
@@ -24,13 +24,14 @@ export default function Page() {
 
     async function addData(dataF: FormData) {
         'use server'
-
+        const linkwa = `https://wa.me/+62${dataF.get("kontak") as string}`
         const form = await prisma.post.create({
             data:{
                 title: dataF.get('title') as string,
                 price: dataF.get('price') as string,
                 content: dataF.get('urlImg') as string,
-                kontak: dataF.get('kontak') as string,
+                kontak: linkwa,
+                // kontak: dataF.get('kontak') as string,
             }
         })
         revalidatePath('/store')
@@ -53,22 +54,18 @@ export default function Page() {
                         <label className='font-semibold w-full' htmlFor="">Nama Produk</label>
                         <input className='w-full sm:w-1/2 bg-gray-200 rounded-lg' type="text" name="title" />
                     </div>
-                    <div className='flex flex-wrap mx-4 mb-6'>
+                    {/* <div className='flex flex-wrap mx-4 mb-6'>
                         <label className='font-semibold w-full' htmlFor="">Harga Produk</label>
                         <input className='w-full sm:w-1/2 bg-gray-200 rounded-lg' type="number" name="price" />
-                    </div>
-                    <div className='flex flex-wrap mx-4 mb-6'>
+                    </div> */}
+                    {/* <div className='flex flex-wrap mx-4 mb-6'>
                         <label className='font-semibold w-full' htmlFor="">Kontak</label>
                         <input className='w-full sm:w-1/2 bg-gray-200 rounded-lg' type="text" name="kontak" />
-                    </div>
-                    {/* <UploadImage /> */}
-                    {/* <div className='flex flex-wrap mx-4 mb-6'>
-                        <label className='font-semibold w-full' htmlFor="">Gambar Produk</label>
-                        <input className='w-full sm:w-1/2 bg-gray-200 rounded-lg' type="file" name="image" onChange={handleFile}/>
                     </div> */}
+
                     <Handle />
                 </div>
-                    <button className='bg-black text-white ml-4 p-2 rounded-lg' type='submit'>Tambah Produk</button>
+                    {/* <button className='bg-black text-white ml-4 p-2 rounded-lg' type='submit'>Tambah Produk</button> */}
 
 
             </form>

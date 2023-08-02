@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { HiArrowSmRight } from 'react-icons/hi';
 
 const surat = [
-    {name: 'Surat Keterangan Jabatan', to:'/administrasi/form'},
+    {name: 'Surat Keterangan Pengantar dari Kantor Desa', to:'/administrasi/form'},
     {name: 'Surat Keterangan Lokasi Tanah', to:'/administrasi/form'},
     {name: 'Surat Keterangan Kehilangan Kartu Keluarga', to:'/administrasi/form'},
     {name: 'Surat Keterangan Domisili', to:'/administrasi/form'},

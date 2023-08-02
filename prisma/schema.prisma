@@ -15,7 +15,7 @@ model post {
   published Boolean  @default(true)
   // authorId  Int
   kontak    String   @default("0") @db.VarChar(50) 
-  price     String   @default("0")@db.VarChar(9)
+  price     String   @default("0")@db.VarChar(20)
   // user      user     @relation(fields: [authorId], references: [id], onUpdate: Restrict, map: "post_ibfk_1")
   // @@index([authorId], map: "authorId")
 }

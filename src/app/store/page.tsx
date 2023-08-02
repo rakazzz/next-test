@@ -42,7 +42,7 @@ export default async function Page() {
                     <div className='flex flex-col h-full relative'>
                         <img className='rounded-t-xl object-cover w-full h-32 sm:max-h-44' src={item.content} alt="https://flowbite.com/docs/images/carousel/carousel-1.svg" />
                         <p className=' flex-1 p-2 font-semibold'>{item.title}</p>
-                        <p className='p-2 '>Rp. {item.price}</p>
+                        <p className='p-2 '>{item.price}</p>
                         <div className=' bg-green-500  rounded-b-lg px-2'>
 
                             <Link href={item.kontak} passHref>
