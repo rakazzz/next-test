@@ -37,6 +37,7 @@ export default async function Home() {
         </div>
         <div className='bg-gray-400 mt-3'>
           <p className=' text-lg mx-5 pt-3 font-bold'>Konten atau produk</p>
+          
           <SlideContent />
 
           <Maps></Maps>

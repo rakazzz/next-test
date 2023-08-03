@@ -45,7 +45,7 @@ export default async function Page() {
                         <p className='p-2 '>{item.price}</p>
                         <div className=' bg-green-500  rounded-b-lg px-2'>
 
-                            <Link href={item.kontak} passHref>
+                            <Link href={item.kontak} target='_blank'  passHref>
                                 <button>
                                     {/* {item.kontak} */}
                                     <FaWhatsapp className='w-7 h-7 text-zinc-50'/>

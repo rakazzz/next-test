@@ -5,7 +5,6 @@ import { useState, Suspense } from "react"
 // import { BeatLoader } from "react-spinners"
 import React from "react"
 import {NumericFormat, PatternFormat} from 'react-number-format';
-import Load from "./loadPage";
 
 export default function handleFile() {
     const preset_key = "hyidm3qm"
@@ -63,11 +62,11 @@ export default function handleFile() {
                     
                     ):''}
                     </div> */}
-                <Suspense fallback={<Load/>  }>
+                
                     <input type="hidden" name="urlImg" value={image} />
 
                     <img className="rounded-lg my-3" src={image} alt="" />
-                </Suspense>
+                
                 {loading ? ( 
                 <button className='bg-gray-500 text-white my-2 p-2 rounded-lg disabled:opacity-5 cursor-not-allowed' type="button">Tambah Produk</button>
 

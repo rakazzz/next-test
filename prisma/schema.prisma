@@ -35,4 +35,84 @@ model user {
   // post    post[]
   profile profile?
   nowa    String  @db.VarChar(16) 
+  ttl     String  @default("-") @db.VarChar(20)
 }
+
+model spfromdesa {
+  id      Int     @id @default(autoincrement())
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  name    String? @db.VarChar(255)
+  nohp    String  @db.VarChar(16)
+  nik     String  @default("0")@db.VarChar(16)
+  alamat  String  @default("") @db.VarChar(100)
+  wargaN  String  @default("") @db.VarChar(20)
+  tempatL String  @default("") @db.VarChar(20)
+  tglL    String  @default("-") @db.VarChar(20)
+  agama   String  @default("") @db.VarChar(10)
+  work    String  @default("-") @db.VarChar(15)
+  tujuan  String  @default("-") @db.VarChar(20)
+  status Boolean  @default(false)
+  }
+
+  model imbS {
+  id      Int     @id @default(autoincrement())
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  name    String? @db.VarChar(255)
+  nohp    String  @db.VarChar(16)
+  tempatL String  @default("") @db.VarChar(20)
+  tglL    String  @default("-") @db.VarChar(20)
+  nik     String  @default("0")@db.VarChar(16)
+  gender  String  @default("0") @db.VarChar(11)
+  agama   String  @default("") @db.VarChar(10)
+  work    String  @default("-") @db.VarChar(15)
+  alamat  String  @default("") @db.VarChar(100)
+  alamatB String @default("-") @db.VarChar(50)
+  type    String @default("") @db.VarChar(50)
+  buildsize String @default("") @db.VarChar(30)
+  status Boolean  @default(false)
+
+  }
+
+  model suketwaliortu {
+  id      Int     @id @default(autoincrement())
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  name    String? @db.VarChar(255)
+  nohp    String  @db.VarChar(16)
+  tempatL String  @default("") @db.VarChar(20)
+  tglL    String  @default("-") @db.VarChar(20)
+  alamat  String  @default("") @db.VarChar(100)
+  agama   String  @default("") @db.VarChar(10)
+  gender  String  @default("0") @db.VarChar(11)
+  sekolah String  @default("-")@db.VarChar(50)
+  namewali    String? @db.VarChar(255)
+  tempatLwali String  @default("") @db.VarChar(20)
+  tglLwali    String  @default("-") @db.VarChar(20)
+  genderwali  String  @default("0") @db.VarChar(11)
+  agamawali   String  @default("") @db.VarChar(10)
+  workwali    String  @default("-") @db.VarChar(15)
+  alamatwali String @default("-") @db.VarChar(50)
+  status Boolean @default(false)
+  }
+
+  model sukettelahmenikah {
+  id      Int     @id @default(autoincrement())
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  namepria String? @db.VarChar(255)
+  nohppria String  @db.VarChar(16)
+  tempatLpria String  @default("") @db.VarChar(20)
+  tglLpria String  @default("-") @db.VarChar(20)
+  agamapria  String  @default("") @db.VarChar(10)
+  workpria    String  @default("-") @db.VarChar(15)
+  alamatpria  String  @default("") @db.VarChar(100)
+  namewanita String? @db.VarChar(255)
+  nohpwanita String  @db.VarChar(16)
+  tempatLwanita String  @default("") @db.VarChar(20)
+  tglLwanita String  @default("-") @db.VarChar(20)
+  agamawanita  String  @default("") @db.VarChar(10)
+  workwanita    String  @default("-") @db.VarChar(15)
+  alamatwanita  String  @default("") @db.VarChar(100)
+  tglnikah    String     @default("") @db.VarChar(20)
+  lokasinikah String @default("-") @db.VarChar(30)
+  status Boolean @default(false)
+
+  }
